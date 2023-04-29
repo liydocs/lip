@@ -7,6 +7,52 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>sielee@163.com (xie)</managingEditor>
     <webMaster>sielee@163.com (xie)</webMaster>
-    <copyright>© 2021 &lt;a href=&#34;https://github.com/miiiku/hugo-theme-kagome&#34;&gt;kagome&lt;/a&gt;.</copyright><atom:link href="https://paliysha.com/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2021 &lt;a href=&#34;https://github.com/miiiku/hugo-theme-kagome&#34;&gt;kagome&lt;/a&gt;.</copyright>
+    <lastBuildDate>Tue, 25 Apr 2023 20:28:38 +0800</lastBuildDate><atom:link href="https://paliysha.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【AI听潮 -- 绘图】Stable diffusion的问世宣布</title>
+      <link>https://paliysha.com/posts/202304252028/</link>
+      <pubDate>Tue, 25 Apr 2023 20:28:38 +0800</pubDate>
+      <author>sielee@163.com (xie)</author>
+      <guid>https://paliysha.com/posts/202304252028/</guid>
+      <description>22 Aug, Stability.ai发布宣言 Stable Diffusion Public Release — Stability AI 我们很高兴地宣布，在我们为研究人员发布稳定扩散之后，我们将公开发布[https://sta</description>
+    </item>
+    
+    <item>
+      <title>Sparks of Artificial General Intelligence</title>
+      <link>https://paliysha.com/posts/202304242103/</link>
+      <pubDate>Mon, 24 Apr 2023 21:03:16 +0800</pubDate>
+      <author>sielee@163.com (xie)</author>
+      <guid>https://paliysha.com/posts/202304242103/</guid>
+      <description>微软154页AI论文：中文版《人工通用智能的星星之火》 原版：Sparks of Artificial General Intelligence- Early experiments with GPT-4.pdf 链接：https://pan.baidu.com/s</description>
+    </item>
+    
+    <item>
+      <title>风筝飞翔的秘密武器：冲出对流</title>
+      <link>https://paliysha.com/posts/202304210850/</link>
+      <pubDate>Fri, 21 Apr 2023 08:50:21 +0800</pubDate>
+      <author>sielee@163.com (xie)</author>
+      <guid>https://paliysha.com/posts/202304210850/</guid>
+      <description>教大家放风筝。 首先要理解， 你所在的地面的风，就是气流， 跟高空的气流，方向是不一样的， 风量也是完全不一样。 风筝要飞得高， 必须依靠高空的气流。 但</description>
+    </item>
+    
+    <item>
+      <title>ChatGPT账号注册手把手教程（最新版）</title>
+      <link>https://paliysha.com/posts/202304201751/</link>
+      <pubDate>Thu, 20 Apr 2023 17:51:41 +0800</pubDate>
+      <author>sielee@163.com (xie)</author>
+      <guid>https://paliysha.com/posts/202304201751/</guid>
+      <description>前言 手工注册ChatGPT账号您预计所需的成本： 时间成本：阅读文档（10min）+ OpenAI官网操作（5min）+ 海外短信平台注册&amp;amp</description>
+    </item>
+    
+    <item>
+      <title>高频算法题</title>
+      <link>https://paliysha.com/posts/202304201101/</link>
+      <pubDate>Thu, 20 Apr 2023 11:01:21 +0800</pubDate>
+      <author>sielee@163.com (xie)</author>
+      <guid>https://paliysha.com/posts/202304201101/</guid>
+      <description>无重复字符的最长子串 相交链表 二分查找 两数之和 反转链表 环形链表 二叉树的中序遍历 三数之和 二叉树的层序遍历 最大子序和 斐波那契数列 翻转二叉树 链表中倒</description>
+    </item>
+    
   </channel>
 </rss>
