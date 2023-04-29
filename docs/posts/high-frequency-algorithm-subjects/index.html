@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html><head>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+
+  
+
+  
+
+  <meta name="generator" content="Hugo 0.111.3">
+  
+  
+  
+  
+  
+  
+  <title>高频算法题 🌟 土豆菜 at渡江</title>
+
+  <meta property="og:title" content="高频算法题" />
+<meta property="og:description" content="无重复字符的最长子串 相交链表 二分查找 两数之和 反转链表 环形链表 二叉树的中序遍历 三数之和 二叉树的层序遍历 最大子序和 斐波那契数列 翻转二叉树 链表中倒数第k个节点 两数相加 排序数组 合并两个有序链表 最大数 只出现一次的数字 最长公共前缀 移动零 螺旋矩阵 爬楼梯 最长回文子串 有效的括号 删除链表的倒数第 N 个结点 删除排序链表中的重复元素 II 最长连续递增序列 最小栈 最长重复子数组 验证回文串 买卖股票的最佳时机 最长递增子序列 单词拆分 对称二叉树 最长增长子序列 leetcode-cn.com/problems/lo…
+var lengthOfLIS = function (nums) { const dp = new Array(nums.length).fill(1); for (let i = 0; i &lt; nums.length; i&#43;&#43;) { // i与i前面的元素比较 for (let j = 0; j &lt; i; j&#43;&#43;) { // 找比i小的元素，找到一个，就让当前序列的最长子序列长度加1 if (nums[i] &gt; nums[j]) { dp[i] = Math." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sieml.github.io/posts/high-frequency-algorithm-subjects/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-20T11:01:21+08:00" />
+<meta property="article:modified_time" content="2023-04-20T11:01:21+08:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="高频算法题"/>
+<meta name="twitter:description" content="无重复字符的最长子串 相交链表 二分查找 两数之和 反转链表 环形链表 二叉树的中序遍历 三数之和 二叉树的层序遍历 最大子序和 斐波那契数列 翻转二叉树 链表中倒数第k个节点 两数相加 排序数组 合并两个有序链表 最大数 只出现一次的数字 最长公共前缀 移动零 螺旋矩阵 爬楼梯 最长回文子串 有效的括号 删除链表的倒数第 N 个结点 删除排序链表中的重复元素 II 最长连续递增序列 最小栈 最长重复子数组 验证回文串 买卖股票的最佳时机 最长递增子序列 单词拆分 对称二叉树 最长增长子序列 leetcode-cn.com/problems/lo…
+var lengthOfLIS = function (nums) { const dp = new Array(nums.length).fill(1); for (let i = 0; i &lt; nums.length; i&#43;&#43;) { // i与i前面的元素比较 for (let j = 0; j &lt; i; j&#43;&#43;) { // 找比i小的元素，找到一个，就让当前序列的最长子序列长度加1 if (nums[i] &gt; nums[j]) { dp[i] = Math."/>
+
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://sieml.github.io/assets/css/style.min.699f46622e3574a7f9ecca4c5877067845fe89ffcd9c4335df2dff23ddae215e.css" integrity="sha256-aZ9GYi41dKf57MpMWHcGeEX&#43;if/NnEM13y3/I92uIV4=">
+  <link rel="icon" href="https://sieml.github.io/liy/images/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://sieml.github.io/liy/images/favicon.ico" type="image/x-icon" />
+  <script src="https://sieml.github.io/assets/js/main.min.182da266209851bc7c828aa7377f98f914e1e76c8decdd53a6cbe9bffea92cde.js" integrity="sha256-GC2iZiCYUbx8goqnN3&#43;Y&#43;RTh52yN7N1Tpsvpv/6pLN4="></script>
+  
+  </head><body><header class="header-container layout-block layout-padding">
+  <div class="header-inner content-padding-large soft-size--large soft-style--box">
+    <div class="header-logo">
+      <a href="https://sieml.github.io"><h1>土豆菜 at渡江</h1></a>
+    </div>
+    <nav class="header-nav">
+      <div class="header-nav--btn">
+        <div class="btn-item"></div>
+        <div class="btn-item"></div>
+        <div class="btn-item"></div>
+      </div>
+      <div class="header-nav--list">
+        <div>
+          
+        </div>
+      </div>
+    </nav>
+  </div>
+</header><main id="content">
+    
+
+    <div class="single-container layout-block">
+      <div class="article-info">
+        <div class="article-header layout-padding">
+          <div class="article-cover card-container content-padding-large soft-size--large soft-style--box ">
+
+  <div class="card-cover">
+    
+  </div>
+
+  <div class="card-text">
+    <h1 class="card-text--title">高频算法题</h1>
+    
+      <p class="card-text--row">2023-04-20 11:01</p>
+      
+      
+      
+
+      
+      
+    
+  </div>
+
+</div>
+        </div>
+
+        <div class="article-content">
+          <div class="markdown-body content-padding-large soft-size--large soft-style--box">
+            <h2 id="无重复字符的最长子串httpsleetcode-cncomproblemslongest-substring-without-repeating-characters"><strong><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">无重复字符的最长子串</a></strong></h2>
+<h2 id="相交链表httpsleetcode-cncomproblemsintersection-of-two-linked-lists"><strong><a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists/" target="_blank" rel="noopener">相交链表</a></strong></h2>
+<h2 id="二分查找httpsleetcode-cncomproblemsbinary-search"><strong><a href="https://leetcode-cn.com/problems/binary-search/" target="_blank" rel="noopener">二分查找</a></strong></h2>
+<h2 id="两数之和httpsleetcode-cncomproblemstwo-sum"><strong><a href="https://leetcode-cn.com/problems/two-sum/" target="_blank" rel="noopener">两数之和</a></strong></h2>
+<h2 id="反转链表httpsleetcode-cncomproblemsreverse-linked-list"><strong><a href="https://leetcode-cn.com/problems/reverse-linked-list/" target="_blank" rel="noopener">反转链表</a></strong></h2>
+<h2 id="环形链表httpsleetcode-cncomproblemslinked-list-cycle"><strong><a href="https://leetcode-cn.com/problems/linked-list-cycle/" target="_blank" rel="noopener">环形链表</a></strong></h2>
+<h2 id="二叉树的中序遍历httpsleetcode-cncomproblemsbinary-tree-inorder-traversal"><strong><a href="https://leetcode-cn.com/problems/binary-tree-inorder-traversal/" target="_blank" rel="noopener">二叉树的中序遍历</a></strong></h2>
+<h2 id="三数之和httpsleetcode-cncomproblems3sum"><strong><a href="https://leetcode-cn.com/problems/3sum/" target="_blank" rel="noopener">三数之和</a></strong></h2>
+<h2 id="二叉树的层序遍历httpsleetcode-cncomproblemsbinary-tree-level-order-traversal"><strong><a href="https://leetcode-cn.com/problems/binary-tree-level-order-traversal/" target="_blank" rel="noopener">二叉树的层序遍历</a></strong></h2>
+<h2 id="最大子序和httpsleetcode-cncomproblemsmaximum-subarray"><strong><a href="https://leetcode-cn.com/problems/maximum-subarray/" target="_blank" rel="noopener">最大子序和</a></strong></h2>
+<h2 id="斐波那契数列httpsleetcode-cncomproblemsfei-bo-na-qi-shu-lie-lcof"><strong><a href="https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/" target="_blank" rel="noopener">斐波那契数列</a></strong></h2>
+<h2 id="翻转二叉树httpsleetcode-cncomproblemsinvert-binary-tree"><strong><a href="https://leetcode-cn.com/problems/invert-binary-tree/" target="_blank" rel="noopener">翻转二叉树</a></strong></h2>
+<h2 id="链表中倒数第k个节点httpsleetcode-cncomproblemslian-biao-zhong-dao-shu-di-kge-jie-dian-lcof"><strong><a href="https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/" target="_blank" rel="noopener">链表中倒数第k个节点</a></strong></h2>
+<h2 id="两数相加httpsleetcode-cncomproblemsadd-two-numbers"><strong><a href="https://leetcode-cn.com/problems/add-two-numbers/" target="_blank" rel="noopener">两数相加</a></strong></h2>
+<h2 id="排序数组httpsleetcode-cncomproblemssort-an-array"><strong><a href="https://leetcode-cn.com/problems/sort-an-array/" target="_blank" rel="noopener">排序数组</a></strong></h2>
+<h2 id="合并两个有序链表httpsleetcode-cncomproblemsmerge-two-sorted-lists"><strong><a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/" target="_blank" rel="noopener">合并两个有序链表</a></strong></h2>
+<h2 id="最大数httpsleetcode-cncomproblemslargest-number"><strong><a href="https://leetcode-cn.com/problems/largest-number/" target="_blank" rel="noopener">最大数</a></strong></h2>
+<h2 id="只出现一次的数字httpsleetcode-cncomproblemssingle-number"><strong><a href="https://leetcode-cn.com/problems/single-number/" target="_blank" rel="noopener">只出现一次的数字</a></strong></h2>
+<h2 id="最长公共前缀httpsleetcode-cncomproblemslongest-common-prefix"><strong><a href="https://leetcode-cn.com/problems/longest-common-prefix/" target="_blank" rel="noopener">最长公共前缀</a></strong></h2>
+<h2 id="移动零httpsleetcode-cncomproblemsmove-zeroes"><strong><a href="https://leetcode-cn.com/problems/move-zeroes/" target="_blank" rel="noopener">移动零</a></strong></h2>
+<h2 id="螺旋矩阵httpsleetcode-cncomproblemsspiral-matrix"><strong><a href="https://leetcode-cn.com/problems/spiral-matrix/" target="_blank" rel="noopener">螺旋矩阵</a></strong></h2>
+<h2 id="爬楼梯httpsleetcode-cncomproblemsclimbing-stairs"><strong><a href="https://leetcode-cn.com/problems/climbing-stairs/" target="_blank" rel="noopener">爬楼梯</a></strong></h2>
+<h2 id="最长回文子串httpsleetcode-cncomproblemslongest-palindromic-substring"><strong><a href="https://leetcode-cn.com/problems/longest-palindromic-substring/" target="_blank" rel="noopener">最长回文子串</a></strong></h2>
+<h2 id="有效的括号httpsleetcode-cncomproblemsvalid-parentheses"><strong><a href="https://leetcode-cn.com/problems/valid-parentheses/" target="_blank" rel="noopener">有效的括号</a></strong></h2>
+<h2 id="删除链表的倒数第-n-个结点httpsleetcode-cncomproblemsremove-nth-node-from-end-of-list"><strong><a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/" target="_blank" rel="noopener">删除链表的倒数第 N 个结点</a></strong></h2>
+<h2 id="删除排序链表中的重复元素-iihttpsleetcode-cncomproblemsremove-duplicates-from-sorted-list-ii"><strong><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/" target="_blank" rel="noopener">删除排序链表中的重复元素 II</a></strong></h2>
+<h2 id="最长连续递增序列httpsleetcode-cncomproblemslongest-continuous-increasing-subsequence"><strong><a href="https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence/" target="_blank" rel="noopener">最长连续递增序列</a></strong></h2>
+<h2 id="最小栈httpsleetcode-cncomproblemsmin-stack"><strong><a href="https://leetcode-cn.com/problems/min-stack/" target="_blank" rel="noopener">最小栈</a></strong></h2>
+<h2 id="最长重复子数组httpsleetcode-cncomproblemsmaximum-length-of-repeated-subarray"><strong><a href="https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/" target="_blank" rel="noopener">最长重复子数组</a></strong></h2>
+<h2 id="验证回文串httpsleetcode-cncomproblemsvalid-palindrome"><strong><a href="https://leetcode-cn.com/problems/valid-palindrome/" target="_blank" rel="noopener">验证回文串</a></strong></h2>
+<h2 id="买卖股票的最佳时机httpsleetcode-cncomproblemsbest-time-to-buy-and-sell-stock"><strong><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/" target="_blank" rel="noopener">买卖股票的最佳时机</a></strong></h2>
+<h2 id="最长递增子序列httpsleetcode-cncomproblemslongest-increasing-subsequence"><strong><a href="https://leetcode-cn.com/problems/longest-increasing-subsequence/" target="_blank" rel="noopener">最长递增子序列</a></strong></h2>
+<h2 id="单词拆分httpsleetcode-cncomproblemsword-break"><strong><a href="https://leetcode-cn.com/problems/word-break/" target="_blank" rel="noopener">单词拆分</a></strong></h2>
+<h2 id="对称二叉树httpsleetcode-cncomproblemssymmetric-tree"><strong><a href="https://leetcode-cn.com/problems/symmetric-tree/" target="_blank" rel="noopener">对称二叉树</a></strong></h2>
+<h2 id="最长增长子序列">最长增长子序列</h2>
+<p><a href="https://leetcode-cn.com/problems/longest-increasing-subsequence/" target="_blank" rel="noopener">leetcode-cn.com/problems/lo…</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#a6e22e">var lengthOfLIS</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">function (nums) {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    const dp = new Array(nums.length).fill(1);
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    for (let i = 0; i &lt; nums.length; i++) {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        // i与i前面的元素比较
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        for (let j = 0; j &lt; i; j++) {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            // 找比i小的元素，找到一个，就让当前序列的最长子序列长度加1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            if (nums[i] &gt; nums[j]) {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                dp[i] = Math.max(dp[i], dp[j] + 1);
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    // 找出最大的子序列
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    return Math.max(...dp);</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">复制代码</span>
+</span></span></code></pre></div><h2 id="基本计算器">基本计算器</h2>
+<p><a href="https://leetcode-cn.com/problems/basic-calculator-ii/" target="_blank" rel="noopener">leetcode-cn.com/problems/ba…</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#a6e22e">var calculate</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">function (s) {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    s = s.trim()
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    const stack = []
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    let preSign = &#39;+&#39;, num = 0, n = s.length
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    for (let i = 0; i &lt; n; i++) {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        if (s[i] &gt;= &#39;0&#39;) num = num * 10 + (s[i] - &#39;0&#39;)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        if (isNaN(Number(s[i])) || i === n - 1) {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            switch (preSign) {
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                case &#39;+&#39;:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                    stack.push(num)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                    break;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">case &#39;-&#39;:</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">stack.push(-num)</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">break;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">case &#39;*&#39;:</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">stack.push(stack.pop() * num)</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">break;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">default:</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">stack.push(stack.pop() / num | 0)</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">break;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">preSign</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">s[i];
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            num = 0;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    return stack.reduce((a, b) =&gt; { return a + b }, 0)</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">};</span>
+</span></span></code></pre></div><p>作者：后海大草鱼</p>
+
+          </div>
+        </div>
+                 
+      
+  
+  
+  
+  
+
+  
+
+  <div class="article-paging">
+    
+      <section class="post-paging--item card-container content-padding-primary soft-size--primary soft-style--box">
+  <div class="card-cover" ></div>
+  <div class="card-text">
+    <a href="/posts/chatgpt-create-account-tutorial/"><h4 class="card-text--title text-ellipsis">ChatGPT账号注册手把手教程（最新版）</h4></a>
+    <p class="card-text--row">2023-04-20 17:51</p>
+  </div>
+</section>
+    
+    
+  </div>
+</div>
+  <aside class="widget-info">
+    
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+<section class="aside-widget widget-articles content-padding-large soft-size--large soft-style--box">
+  <h2 class="widget-header">
+    <div class="title">
+      <span>Related Posts</span>
+    </div>
+  </h2>
+  <div class="widget-body">
+    <ul class="post-list">
+      
+      
+        <li class="post-item"><a href="/posts/the-secret-weapon-of-kite-flying-breaking-out-of-convection/">风筝飞翔的秘密武器：冲出对流</a></li>
+      
+        <li class="post-item"><a href="/posts/chatgpt-create-account-tutorial/">ChatGPT账号注册手把手教程（最新版）</a></li>
+      
+    </ul>
+  </div>
+</section>
+
+
+    
+
+
+
+
+
+    
+
+
+
+
+  </aside>
+</div>
+  </main><footer class="footer-container layout-block">
+  
+
+  <div class="colour-bar"></div>
+  
+  
+
+  
+
+  <p>
+    Powered by
+    <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>
+    Theme - 
+    <a href="https://github.com/miiiku/hugo-theme-kagome" target="_blank" rel="noopener noreferrer author">kagome</a>
+  </p>
+
+  <p>
+    <a href="javascript:;" id="theme-light">🌞 light</a>
+    <a href="javascript:;" id="theme-dark">🌛 dark</a>
+    <a href="javascript:;" id="theme-auto">🤖️ auto</a>
+  </p>
+</footer>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html><head>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <meta name="author" content="xie">
+  
+
+   
+    
+    
+    
+    
+    
+    
+    <meta name="keywords" content="theme,kagome">
+  
+
+  
+
+  <meta name="generator" content="Hugo 0.111.3">
+  
+  
+  
+  
+  
+  
+  <title>【AI听潮 -- 绘图】Stable Diffusion All the Things(关于Stable Diffusion的一切) 🌟 土豆菜 at渡江</title>
+
+  <meta property="og:title" content="【AI听潮 -- 绘图】Stable Diffusion All the Things(关于Stable Diffusion的一切)" />
+<meta property="og:description" content="Stable Diffusion是什么？ Stable Diffusion是2022年发布的深度学习文本到图像生成模型。它主要用于根据文本的描述产生详细图像，尽管它也" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://paliysha.com/posts/202304252038/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-25T20:38:38+08:00" />
+<meta property="article:modified_time" content="2023-04-25T20:38:38+08:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="【AI听潮 -- 绘图】Stable Diffusion All the Things(关于Stable Diffusion的一切)"/>
+<meta name="twitter:description" content="Stable Diffusion是什么？ Stable Diffusion是2022年发布的深度学习文本到图像生成模型。它主要用于根据文本的描述产生详细图像，尽管它也"/>
+
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://paliysha.com/assets/css/style.min.699f46622e3574a7f9ecca4c5877067845fe89ffcd9c4335df2dff23ddae215e.css" integrity="sha256-aZ9GYi41dKf57MpMWHcGeEX&#43;if/NnEM13y3/I92uIV4=">
+  <link rel="icon" href="https://sieml.github.io/liy/images/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://sieml.github.io/liy/images/favicon.ico" type="image/x-icon" />
+  <script src="https://paliysha.com/assets/js/main.min.182da266209851bc7c828aa7377f98f914e1e76c8decdd53a6cbe9bffea92cde.js" integrity="sha256-GC2iZiCYUbx8goqnN3&#43;Y&#43;RTh52yN7N1Tpsvpv/6pLN4="></script>
+  
+  </head><body><header class="header-container layout-block layout-padding">
+  <div class="header-inner content-padding-large soft-size--large soft-style--box">
+    <div class="header-logo">
+      <a href="https://paliysha.com"><h1>土豆菜 at渡江</h1></a>
+    </div>
+    <nav class="header-nav">
+      <div class="header-nav--btn">
+        <div class="btn-item"></div>
+        <div class="btn-item"></div>
+        <div class="btn-item"></div>
+      </div>
+      <div class="header-nav--list">
+        <div>
+          
+          <a class="list-item soft-size--small soft-style--hover soft-style--active" href="/" title="">HOME</a>
+          
+          <a class="list-item soft-size--small soft-style--hover soft-style--active" href="/posts" title="">POSTS</a>
+          
+          <a class="list-item soft-size--small soft-style--hover soft-style--active" href="/about" title="">ABOUT</a>
+          
+          <a class="list-item soft-size--small soft-style--hover soft-style--active" href="/link" title="">LINK</a>
+          
+        </div>
+      </div>
+    </nav>
+  </div>
+</header><main id="content">
+    
+
+    <div class="single-container layout-block">
+      <div class="article-info">
+        <div class="article-header layout-padding">
+          <div class="article-cover card-container content-padding-large soft-size--large soft-style--box ">
+
+  <div class="card-cover">
+    
+  </div>
+
+  <div class="card-text">
+    <h1 class="card-text--title">【AI听潮 -- 绘图】Stable Diffusion All the Things(关于Stable Diffusion的一切)</h1>
+    
+      <p class="card-text--row">2023-04-25 20:38</p>
+      
+      
+      
+
+      
+      
+    
+  </div>
+
+</div>
+        </div>
+
+        <div class="article-content">
+          <div class="markdown-body content-padding-large soft-size--large soft-style--box">
+            <h2 id="stable-diffusion是什么">Stable Diffusion是什么？</h2>
+<p>Stable Diffusion是2022年发布的深度学习文本到图像生成模型。它主要用于根据文本的描述产生详细图像，尽管它也可以应用于其他任务，如内补绘制、外补绘制，以及在提示词​（英语）指导下产生图生图的翻译。[2]</p>
+<p>它是一种潜在（latent）扩散模型（diffusion model，LDM），由慕尼黑大学的CompVis研究团体开发的各种生成性人工神經网络。[3]它是由初创公司StabilityAI，CompVis与Runway合作开发的，并得到EleutherAI和LAION​（英语）的支持。[4][5][6] 截至2022年10月，StabilityAI筹集了1.01亿美元的资金。[7]</p>
+<p>Stable Diffusion的代码和模型权重已公开发布，可以在大多数配备有适度GPU的电脑硬件上运行。而以前的专有文生图模型（如DALL-E和Midjourney）只能通过云计算服务访问。[8][9]</p>
+<h3 id="运行环境建议">运行环境建议</h3>
+<p>Stable Diffusion建议在10GB以上的VRAM下运行， 但是VRAM较少的用户可以选择以float16的精度加载权重，而不是默认的float32，以降低VRAM使用率。[12]</p>
+<h2 id="关于许可说明">关于许可说明</h2>
+<p>与DALL-E等模型不同，Stable Diffusion提供其源代码[18][5]以及预训练的权重。其许可证禁止某些使用案例，包括犯罪，诽谤，骚扰，人肉搜索，“剥削…未成年人”，提供医疗建议，自动创建法律义务，伪造法律证据，以及“基于…社会行为或…个人或人格特征…或受法律保护的特征或类别而歧视或伤害个人或群体”。[19][20] 用户拥有其生成的图像的权利，并可自由地将其用于商业用途。[21]</p>
+<h2 id="模型训练">模型训练</h2>
+<p>Stable Diffusion是在LAION-5B的图片和标题对上训练的，LAION-5B是一个公开的数据集，源自从网络上抓取的Common Crawl​（英语）数据。该数据集由LAION​（英语）创建，LAION是一家德国非营利组织，接受StabilityAI的资助。[14][22] 该模型最初是在LAION-5B的一个大子集上训练的，最后几轮训练是在“LAION-Aesthetics v2 5+”上进行的，这是一个由6亿张带标题的图片组成的子集，人工智能预测人类在被要求对这些图片的喜欢程度打分时至少会给5/10打分。[14][23] 这个最终的子集也排除了低分辨率的图像和被人工智能识别为带有水印的图像。[14] 对该模型的训练数据进行的第三方分析发现，在从所使用的原始更广泛的数据集中抽取的1200万张图片的较小子集中，大约47%的图像样本量来自100个不同的网站，其中Pinterest占8.5%子集，其次是WordPress，Blogspot，Flickr，DeviantArt和维基共享资源等网站。[14]</p>
+<h3 id="heading"></h3>
+<h2 id="支持用户再训练----微调">支持用户再训练 &ndash; 微调</h2>
+<p>该模型是在亚马逊云计算服务上使用256个NVIDIA A100 GPU训练，共花费15万个GPU小时，成本为60万美元。[24][25][26]</p>
+<p>为了纠正模型初始训练的局限性，终端用户可以选择实施额外的训练，以微调生成输出以匹配更具体的使用情况。有三种方法可以让用户对Stable Diffusion模型权重存档点进行微调：</p>
+<p>“嵌入”（Embedding）可以从用户提供的一些图像被训练出来，并允许模型在提示词​中使用嵌入的名称时生成视觉上相似的图像。[27]嵌入是基于2022年台拉维夫大学的研究人员在英伟达的支持下开发的“文本倒置”（Textual Inversion）概念，其中模型的文本编码器使用的特定标记的矢量表示与新的伪词相关系。嵌入可以用来减少原始模型中的偏差，或模仿风格。[28]
+“超网络”（Hypernetwork）是NovelAI软件开发员Kurumuz在2021年创造的一种技术，最初用于调节文本生成的Transformer模型，它能让Stable Diffusion派生的文生图模型​模仿各种特定艺术家的风格，无论原始模型​能否识别此艺术家，通过在较大的神经网络中的不同点应用一个预训练的小神经网络。超网络将文生图或图生图结果导向特定方向，例如加上艺术风格，当与一个较大的神经网络结合使用时。它通过查找重要的关键区域来处理图像（例：眼睛，头发），然后在二级潜在空间中修补这些区域。超网络的一个缺点是它们的准确性相对较低，也有时会产生不可预知的结果。因此，超网络适用于加上视觉风格或清理人体瑕疵。[29]
+DreamBooth是一个深度学习模型，由Google Research和波士顿大学的研究人员于2022年开发，可以微调模型以产生与指定主题相关的输出图像。[30]</p>
+<h3 id="下载模型">下载模型</h3>
+<ol>
+<li>web-ui软件直接界面操作：<a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank" rel="noopener">AUTOMATIC1111/stable-diffusion-webui: Stable Diffusion web UI (github.com)</a>，安装后找到download；访问不了github.com的从这下：https://pan.baidu.com/s/1-R9crIJSHXmybgd5o42tng?pwd=233h</li>
+<li>另外可以手动操作：打开https://cyberes.github.io/stable-diffusion-models/，下载你需要的模型后放入stable-diffusion-webui\models\Stable-diffusion的路径里；注：要放入pt为后缀的文件，不然生成出来的图片会变灰</li>
+</ol>
+<p>a. 面部修复模型：https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth</p>
+<p>b. 图片无损模型：https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth</p>
+<p><a href="https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth" target="_blank" rel="noopener">https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth</a></p>
+<h2 id="为什么将它开源">为什么将它开源</h2>
+<p>StabilityAI的首席执行官Emad Mostaque解决了该模型可能被用于滥用目的的担忧，他解释说：“人们有责任了解他们在操作这项技术时是否符合道德、道德和法律”，[9]将Stable Diffusion的能力交到公众手中会使该技术在整体上提供净收益，即使有潜在的负面后果。[9] 此外，Mostaque认为，Stable Diffusion的开放可用性背后的意图是结束大公司对此类技术的控制和主导地位，他们之前只开发了封闭的人工智能系统进行图像合成。[9][33]</p>
+<ul>
+<li>我们的SD代码库在很大程度上建立在OpenAI的ADM代码库 <a href="https://github.com/openai/guided-diffusion" target="_blank" rel="noopener">https://github.com/openai/guided-diffusion</a>和 <a href="https://github.com/lucidrains/denoising-diffusion-pytorch" target="_blank" rel="noopener">https://github.com/lucidrains/denoising-diffusion-pytorch</a> 之上。 感谢您的开源！</li>
+<li>变压器编码器的实现方式来自 x-变压器 <a href="https://github.com/lucidrains/x-transformers" target="_blank" rel="noopener">https://github.com/lucidrains/x-transformers</a> 由 lucidrains <a href="https://github.com/lucidrains?tab=repositories" target="_blank" rel="noopener">https://github.com/lucidrains?tab=repositories</a>提供。</li>
+</ul>
+<h2 id="菜鸟之软件源码学习指路">菜鸟之软件源码学习指路</h2>
+<p><a href="https://baijiahao.baidu.com/s?id=1760995753534473818" title="AI绘画：SD Web UI（一）Windows本地搭建" target="_blank" rel="noopener">AI绘画：SD Web UI（一）Windows本地搭建</a> 、[<a href="https://www.bilibili.com/read/cv20155351" target="_blank" rel="noopener">Novelai]Stable Diffusion WebUI官网下载流</a>
+<a href="https://baijiahao.baidu.com/s?id=1761065115341103269" target="_blank" rel="noopener">AI绘画：Stable Diffusion Web UI（二）插件及模型安装</a>
+<a href="https://baijiahao.baidu.com/s?id=1761246612686488588" target="_blank" rel="noopener">AI绘画：Stable Diffusion Web UI（三）基础使用教程</a></p>
+<h5 id="ai绘画stable-diffusion-web-ui四模型推荐httpsbaijiahaobaiducomsid1761446253747058366"><a href="https://baijiahao.baidu.com/s?id=1761446253747058366" target="_blank" rel="noopener">AI绘画：Stable Diffusion Web UI（四）模型推荐</a></h5>
+<h3 id="需要下载的前置依赖">需要下载的前置依赖：</h3>
+<p>CUDA驱动</p>
+<p><a href="https://developer.nvidia.com/cuda-downloads?target_os=Windows&amp;target_arch=x86_64" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64</a></p>
+<p>Git程序</p>
+<p><a href="https://git-scm.com/downloads/" target="_blank" rel="noopener">https://git-scm.com/downloads/</a></p>
+<p>python</p>
+<p><a href="https://www.python.org/downloads/" target="_blank" rel="noopener">https://www.python.org/downloads/</a></p>
+<p>dev-sidecar 低魔法</p>
+<p><a href="https://github.com/docmirror/dev-sidecar" target="_blank" rel="noopener">https://github.com/docmirror/dev-sidecar</a></p>
+<p>BitComet</p>
+<p><a href="http://www.bitcomet.com/en" target="_blank" rel="noopener">http://www.bitcomet.com/en</a></p>
+<p>Miniconda3</p>
+<p>打开webui.cmd文件，并修改cutom_conda_path路径，如果是默认安装在C盘的，可以不用修改。</p>
+<p>最后cmd控制台出现http://localhost:7860，或者打开该地址有内容显示，就代表成功，拷贝该地址直接在浏览器打开就行。</p>
+<h4 id="注安装python时要勾选下面的-add-pythonexe-to-path">注：安装python时要勾选下面的 add python.exe to PATH</h4>
+<h2 id="在线生图">在线生图</h2>
+<p>DreamStudio <a href="https://beta.dreamstudio.ai/generate" target="_blank" rel="noopener">https://beta.dreamstudio.ai/generate</a></p>
+<p>太乙中文版 <a href="https://huggingface.co/spaces/IDEA-CCNL/Taiyi-Stable-Diffusion-Chinese" target="_blank" rel="noopener">Taiyi Stable Diffusion Chinese - a Hugging Face Space by IDEA-CCNL</a></p>
+<p>太乙1B中文版 <a href="https://huggingface.co/IDEA-CCNL/Taiyi-Stable-Diffusion-1B-Chinese-v0.1" target="_blank" rel="noopener">IDEA-CCNL/Taiyi-Stable-Diffusion-1B-Chinese-v0.1 · Hugging Face</a></p>
+<p>封神榜中文版 <a href="https://fengshenbang-doc.readthedocs.io/zh/latest/index.html" target="_blank" rel="noopener">封神榜 中文语言预训练模型开源计划 — Fengshenbang-LM 1.0 文档 (fengshenbang-doc.readthedocs.io)</a></p>
+<p>参考：
+[1] Stable Diffision <a href="https://zh.wikipedia.org/wiki/Stable_Diffusion" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/Stable_Diffusion</a>
+[2] HuggingFace <a href="https://huggingface.co/spaces/stabilityai/stablelm-tuned-alpha-chat" target="_blank" rel="noopener">https://huggingface.co/spaces/stabilityai/stablelm-tuned-alpha-chat</a>
+[3] StableLM <a href="https://github.com/Stability-AI/StableLM" target="_blank" rel="noopener">https://github.com/Stability-AI/StableLM</a></p>
+<p>[4] CompVis/Stable-diffusion <a href="https://github.com/CompVis/stable-diffusion" target="_blank" rel="noopener">https://github.com/CompVis/stable-diffusion</a></p>
+<p>[5]  <a href="https://stability.ai/blog/stability-ai-launches-the-first-of-its-stablelm-suite-of-language-models" target="_blank" rel="noopener">https://stability.ai/blog/stability-ai-launches-the-first-of-its-stablelm-suite-of-language-models</a>
+[6] <a href="https://twitter.com/StabilityAI/status/1648706156330876928" target="_blank" rel="noopener">https://twitter.com/StabilityAI/status/1648706156330876928</a>
+[7] <a href="https://mashable.com/article/stablelm-stability-ai-language-model-explained" target="_blank" rel="noopener">https://mashable.com/article/stablelm-stability-ai-language-model-explained</a></p>
+<p>[8] Stable_diffusion.ipynb - 联合实验室原理介绍 <a href="https://colab.research.google.com/github/fastai/diffusion-nbs/blob/master/stable_diffusion.ipynb#scrollTo=5366WbmFs6cS" target="_blank" rel="noopener">https://colab.research.google.com/github/fastai/diffusion-nbs/blob/master/stable_diffusion.ipynb#scrollTo=5366WbmFs6cS</a></p>
+<p>[9] 超详细！10分钟完成AI绘图本地部署 <a href="http://www.360doc.com/content/23/0315/16/1072127783_1072127783.shtml" target="_blank" rel="noopener">http://www.360doc.com/content/23/0315/16/1072127783_1072127783.shtml</a></p>
+
+          </div>
+        </div>
+                 
+      
+  
+  
+  
+  
+
+  
+
+  <div class="article-paging">
+    
+    
+      <section class="post-paging--item card-container content-padding-primary soft-size--primary soft-style--box">
+  <div class="card-cover" background-image-lazy data-img="https://th.bing.com/th/id/OIG.fooxvbv39G.xzCyIrRo6?pid=ImgGn"></div>
+  <div class="card-text">
+    <a href="/posts/202304242103/"><h4 class="card-text--title text-ellipsis">Sparks of Artificial General Intelligence</h4></a>
+    <p class="card-text--row">2023-04-24 21:03</p>
+  </div>
+</section>
+    
+  </div>
+</div>
+  <aside class="widget-info">
+    
+<section class="aside-widget widget-author content-padding-large soft-size--large soft-style--box">
+  <div class="widget-body">
+    <div class="author-box avatar">
+      
+      <img class="author-avatar soft-size--round soft-style--box" src="https://avatars.githubusercontent.com/u/16185379?s=400&amp;u=f44e0336c0e9f772424295063b327db229d08e09&amp;v=4" alt="xie">
+      
+      <h2 class="author-name text-ellipsis">xie</h2>
+      
+      <p class="author-desc text-ellipsis">热爱生活、热爱大自然</p>
+      
+    </div>
+  </div>
+</section>
+
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+<section class="aside-widget widget-articles content-padding-large soft-size--large soft-style--box">
+  <h2 class="widget-header">
+    <div class="title">
+      <span>Related Posts</span>
+    </div>
+  </h2>
+  <div class="widget-body">
+    <ul class="post-list">
+      
+      
+        <li class="post-item"><a href="/posts/202304242103/">Sparks of Artificial General Intelligence</a></li>
+      
+        <li class="post-item"><a href="/posts/202304210850/">风筝飞翔的秘密武器：冲出对流</a></li>
+      
+        <li class="post-item"><a href="/posts/202304201751/">ChatGPT账号注册手把手教程（最新版）</a></li>
+      
+        <li class="post-item"><a href="/posts/202304201101/">高频算法题</a></li>
+      
+        <li class="post-item"><a href="/posts/101010000/"></a></li>
+      
+        <li class="post-item"><a href="/posts/101010000/"></a></li>
+      
+    </ul>
+  </div>
+</section>
+
+
+    
+
+
+
+
+<section class="aside-widget widget-categories content-padding-large soft-size--large soft-style--box">
+  <h2 class="widget-header">
+    <div class="title">
+      <span>Categories</span>
+    </div>
+  </h2>
+  <div class="widget-body">
+    <ul class="categories-list">
+      
+        <li>
+          <a href="https://paliysha.com/categories/blog_construct/">blog_construct</a>
+          <span>1</span>
+        </li>
+      
+    </ul>
+  </div>
+
+  
+</section>
+
+
+    
+
+
+
+
+<section class="aside-widget widget-tags content-padding-large soft-size--large soft-style--box">
+  <h2 class="widget-header">
+    <div class="title">
+      <span>Tags</span>
+    </div>
+  </h2>
+  <div class="widget-body">
+    <div class="tags-list">
+      
+        <a href="https://paliysha.com/tags/web_nav/" data-count="1" class="soft-size--small soft-style--hover soft-style--active">web_nav</a>
+      
+    </div>
+  </div>
+
+  
+</section>
+
+  </aside>
+</div>
+  </main><footer class="footer-container layout-block">
+  
+  <div class="social-icons">
+    
+      <a class="soft-size--primary soft-style--box" href="https://github.com/sieml" target="_blank" rel="noopener noreferrer">
+          
+        <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+        </svg>
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+      </a>
+    
+      <a class="soft-size--primary soft-style--box" href="https://blog.csdn.net/u010311220" target="_blank" rel="noopener noreferrer">
+        
+
+        
+
+        
+
+        
+
+        
+
+          
+		<svg class="icon icon-csdn" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M512 992C246.896 992 32 777.104 32 512 32 246.896 246.896 32 512 32c265.104 0 480 214.896 480 480 0 265.104-214.896 480-480 480z m16.00000031-387.67999969c32.67199969 4.08 64.48000031 4.8 96.31999969 1.968 21.6-1.92 42.01600031-7.84000031 60.16000031-20.544 35.82400031-25.12000031 46.67200031-79.872 22.73599969-115.36000031-13.71199969-20.352-34.512-28.44799969-56.95999969-33.28000031-32.86399969-7.07200031-66.048-5.39200031-99.23200031-3.19999969-5.31199969 0.336-6.336 2.88-6.78400031 7.69600031-2.88 30.64000031-6.12799969 61.23199969-9.19999969 91.83999938-2.352 23.26399969-4.62400031 46.52800031-7.03999969 70.88000062z m50.064-31.80800062c1.84000031-19.60000031 3.408-36.88000031 5.088-54.15999938 1.45600031-14.91199969 3.19999969-29.79199969 4.43199938-44.72000062 0.336-4.01599969 1.45600031-6.24 5.58400031-5.98399969 14.64 0.97600031 29.72800031 0.03199969 43.80799969 3.42400031 34.20799969 8.27200031 45.67999969 50.91199969 21.888 77.83999969-14.832 16.78399969-34.464 22.11199969-55.55199938 23.52-7.93600031 0.51199969-15.95200031 0.07999969-25.248 0.07999969zM512 439.15200031c-2.04799969-0.60799969-3.312-1.104-4.62400031-1.344-35.35999969-6.44800031-70.96000031-7.80799969-106.54399969-2.64-19.66399969 2.84800031-38.448 8.89600031-53.88799969 21.87199969-21.552 18.11200031-20.28799969 43.92 4.128 58.128 12.24 7.12000031 26.27200031 11.72800031 39.936 16.20799969 13.2 4.32 27.18400031 6.40000031 40.44799969 10.56 11.808 3.67999969 13.13599969 13.42399969 3.36 20.91200062-3.13600031 2.4-6.97600031 4.76800031-10.81600031 5.39199938-10.49599969 1.71199969-21.28000031 4.11199969-31.71199969 3.34400062-22.59199969-1.66399969-45.04000031-5.11999969-68.016-7.90400062-1.27999969 9.95200031-2.75200031 21.648-4.272 33.696 3.91999969 1.27999969 7.2 2.56000031 10.56 3.39200062 31.824 7.968 64.11199969 9.00799969 96.48 4.8 18.83200031-2.448 37.008-7.40800031 53.15200031-17.84000062 26.81599969-17.328 34.39999969-53.616-4.38400031-70.67199938-13.60000031-5.98399969-28.30399969-9.76000031-42.64000031-14.14400062-10.704-3.264-21.85600031-5.26399969-32.36799938-8.928-9.168-3.19999969-10.44799969-11.44000031-2.84800031-17.24799938 4.368-3.32800031 10.04800031-6.55999969 15.36-6.912a450.79999969 450.79999969 0 0 1 50.04799969-0.80000062c14.41600031 0.65599969 28.73599969 3.32800031 43.584 5.184L512 439.15200031z m241.07200031 1.92L735.99999969 607.904h50.76800062c4.48000031-42.78400031 9.10399969-85.056 13.18399969-127.392 0.576-5.96800031 2.208-8.28799969 8.14399969-8.448 10.72000031-0.25600031 21.456-1.85599969 32.14400062-1.47199969 22.24000031 0.79999969 39.744 9.12 36 40.56-2.71999969 22.752-5.24800031 45.53599969-7.728 68.31999938-1.02400031 9.43999969-1.71199969 18.92800031-2.56000031 28.512h51.87199969c3.36-33.05599969 7.488-65.68000031 9.84-98.43199969 3.19999969-44.496-16.656-68.736-60.63999938-75.19999969-38.4-5.63200031-76.25599969-0.31999969-113.952 6.68799938z m-453.28000031 126.192c-8.19199969 1.21600031-15.36 2.62399969-22.59199969 3.264-24.048 2.09599969-48.11200031 3.696-71.53600031-4.00000031-13.03999969-4.30399969-23.136-11.79199969-27.936-24.336-7.40800031-19.40800031 0.83200031-44.16 18.59200031-56.544 16.28800031-11.35999969 35.35999969-14.928 54.79999969-14.928 21.13600031-0.01600031 42.27199969 2.27200031 63.96799969 3.6L320 437.28000031c-14.12800031-1.61599969-27.648-3.67999969-41.24800031-4.608-38.448-2.62399969-75.6 2.448-110.12799938 19.18399969-28.14400031 13.64800031-48.79999969 33.76000031-55.008 63.87199969-7.36000031 35.76 10.81600031 65.15200031 48.528 80.48000062 17.952 7.27999969 36.83200031 11.72800031 56.256 11.808 23.20000031 0.096 46.39999969-1.47199969 69.56799938-2.76800062 2.91199969-0.16000031 7.79200031-2.71999969 8.12800031-4.71999938 1.85599969-10.83199969 2.56000031-21.82399969 3.696-33.24800062z"></path></svg>
+        
+      </a>
+    
+      <a class="soft-size--primary soft-style--box" href="https://weibo.com/u/5767547159" target="_blank" rel="noopener noreferrer">
+        
+
+        
+
+        
+
+          
+        <svg class="icon icon-weibo" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path d="M385.682429 733.696q11.995429-19.456 6.290286-39.424t-25.746286-28.598857q-19.456-7.972571-41.691429-0.585143t-34.304 26.258286q-12.580571 19.456-7.460571 39.131429t24.576 28.891429 42.569143 1.462857 35.693714-27.136zM439.442429 664.576q4.534857-7.460571 1.974857-15.140571t-10.020571-10.605714q-7.972571-2.852571-16.310857 0.292571t-12.288 10.605714q-9.728 17.700571 7.460571 25.746286 7.972571 2.852571 16.603429-0.292571t12.580571-10.605714zM538.843572 725.723429q-25.746286 58.294857-90.258286 85.723429t-128 6.875429q-61.147429-19.456-84.260571-72.265143t3.730286-107.154286q26.843429-53.174857 86.601143-79.433143t120.32-10.825143q63.414857 16.603429 90.550857 68.315429t1.462857 108.836571zM717.165858 634.294857q-5.12-54.857143-50.834286-97.133714t-119.149714-62.317714-156.891429-11.995429q-127.414857 13.165714-211.163429 80.822857t-75.702857 151.113143q5.12 54.857143 50.834286 97.133714t119.149714 62.317714 156.891429 11.995429q127.414857-13.165714 211.163429-80.822857t75.702857-151.113143zM893.147572 636.562286q0 38.838857-21.138286 79.725714t-62.317714 78.262857-96.256 67.145143-129.170286 47.396571-154.550857 17.700571-157.110857-19.163429-137.435429-53.174857-98.011429-86.308571-37.156571-114.029714q0-65.682286 39.716571-139.995429t112.859429-147.456q96.548571-96.548571 195.145143-134.875429t140.873143 4.022857q37.156571 36.571429 11.410286 119.442286-2.267429 7.972571-0.585143 11.410286t5.705143 4.022857 8.265143-0.292571 7.68-1.974857l3.437714-1.170286q79.433143-33.718857 140.580571-33.718857t87.405714 34.889143q25.746286 35.986286 0 101.741714-1.170286 7.460571-2.56 11.410286t2.56 7.168 6.875429 4.315429 9.728 3.437714q32.548571 10.313143 58.88 26.843429t45.714286 46.592 19.456 66.56zM850.871001 279.990857q23.990857 26.843429 31.158857 62.025143t-3.730286 67.145143q-4.534857 13.165714-16.822857 19.456t-25.453714 2.267429q-13.165714-4.534857-19.456-16.822857t-2.267429-25.453714q11.410286-35.986286-13.677714-63.414857t-61.147429-19.968q-13.677714 2.852571-25.746286-4.534857t-14.262857-21.138286q-2.852571-13.677714 4.534857-25.453714t21.138286-14.555429q34.304-7.460571 68.022857 3.145143t57.709714 37.449143zM954.295001 186.88q49.737143 54.857143 64.292571 127.122286t-7.68 138.020571q-5.12 15.433143-19.456 22.820571t-29.696 2.267429-22.820571-19.456-2.852571-29.696q16.018286-46.884571 5.705143-98.304t-45.714286-90.258286q-35.401143-39.424-84.553143-54.564571t-98.889143-4.827429q-16.018286 3.437714-29.696-5.412571t-17.115429-24.868571 5.412571-29.403429 24.868571-16.822857q70.290286-14.848 139.410286 6.582857t118.857143 76.873143z"></path>
+        </svg>
+        
+
+        
+
+        
+      </a>
+    
+      <a class="soft-size--primary soft-style--box" href="https://www.zhihu.com/people/89bcfd0ccb23bf1ce424891b24691633" target="_blank" rel="noopener noreferrer">
+        
+
+        
+
+        
+
+        
+
+          
+        <svg class="icon icon-zhihu" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path d="M544.949 561.422s0-71.387-34.779-75.050c-34.779-3.663-142.775 0-142.775 0v-219.654h161.078s-1.83-73.219-32.949-73.219h-261.755l43.93-117.148s-65.897 3.663-89.692 45.761-98.844 252.604-98.844 252.604 25.627 10.983 67.726-20.134c42.101-31.116 56.743-86.033 56.743-86.033l76.879-3.663 1.83 223.316s-133.621-1.83-161.078 0c-27.457 1.83-42.101 75.050-42.101 75.050h203.182s-18.307 124.47-69.557 214.164c-53.085 89.692-151.929 161.078-151.929 161.078s71.387 29.287 140.947-10.983c69.557-42.101 120.811-223.316 120.811-223.316l162.912 203.182s14.643-97.013-1.83-124.47c-18.307-27.457-113.49-137.283-113.49-137.283l-42.101 36.607 29.287-120.811h177.552zM587.050 188.010l-1.83 660.793h65.897l23.795 82.37 115.321-82.37h162.912v-660.793h-366.091zM879.92 775.584h-76.879l-97.013 75.050-21.965-75.050h-20.134v-512.527h215.991v512.527z"></path>
+        </svg>
+		
+
+        
+      </a>
+    
+  </div>
+  
+
+  <div class="colour-bar"></div>
+  
+  
+  <p>© 2021 <a href="https://github.com/miiiku/hugo-theme-kagome">kagome</a>.</p>
+  
+
+  
+
+  <p>
+    Powered by
+    <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>
+    Theme - 
+    <a href="https://github.com/miiiku/hugo-theme-kagome" target="_blank" rel="noopener noreferrer author">kagome</a>
+  </p>
+
+  <p>
+    <a href="javascript:;" id="theme-light">🌞 light</a>
+    <a href="javascript:;" id="theme-dark">🌛 dark</a>
+    <a href="javascript:;" id="theme-auto">🤖️ auto</a>
+  </p>
+</footer>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
