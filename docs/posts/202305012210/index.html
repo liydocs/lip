@@ -151,22 +151,6 @@
 <script src="../../js/imagesloaded.pkgd.min.js"></script>
 <script src="../../js/masonry.pkgd.min.js"></script>
 <script>
-// 等待文档加载完成
-$(document).ready(function () {
-
-  // 调用 Masonry 插件
-  $('.grid').masonry({
-    itemSelector: '.grid-item', // 定义子元素选择器
-    columnWidth: '.grid-sizer', // 定义列宽
-    percentPosition: true       // 开启百分比定位
-  });
-
-  // 等待所有图片加载完成后再次调用 Masonry 插件
-  $('.grid').imagesLoaded().progress(function () {
-    $('.grid').masonry('layout');
-  });
-
-});
 </script>
           </div>
         </div>
