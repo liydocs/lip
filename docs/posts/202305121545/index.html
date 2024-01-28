@@ -115,7 +115,7 @@
         
                  var link = "https:\/\/api.lovelive.tools\/api\/SweetNothings\/Web\/1";
         console.log('reqSpan has been loaded: ' + link);
-        fetch(link)
+        fetch(link,{ mode: 'no-cors' })
     		.then(data => {
 		  console.log("res: "+data.toString());
 		  window.fff=data;
