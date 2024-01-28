@@ -113,13 +113,13 @@
        var spanElement = document.getElementById('reqSpan');
 	  console.log("spanElement: "+spanElement);
         
-                 var link = "https:\/\/api.lovelive.tools\/api\/SweetNothings\/Web\/1";
+                 var link = "";
         console.log('reqSpan has been loaded: ' + link);
-        fetch(link,{ mode: 'no-cors' })
+        fetch(link,{ mode: 'no-cors'})
     		.then(data => {
 		  console.log("res: "+data.toString());
 		  window.fff=data;
-      	  spanElement.innerHTML = JSON.stringify(data).returnObj.cntent;
+      	  spanElement.innerHTML = JSON.stringify(data);
     		})
 		.catch(error => {
   		  
