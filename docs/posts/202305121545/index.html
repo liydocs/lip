@@ -106,7 +106,29 @@
 
         <div class="article-content">
           <div class="markdown-body content-padding-large soft-size--large soft-style--box">
-            <h1 id="杰伦过往专辑之个人略评">杰伦过往专辑之个人略评</h1>
+            <h1 id="hahahugoshortcodes0hbhb"><span apinet id="reqSpan"></span>
+  <script>
+    window.onload = function() {
+      
+       var spanElement = document.getElementById('reqSpan');
+	  console.log("spanElement: "+spanElement);
+        
+                 var link = "https:\/\/api.lovelive.tools\/api\/SweetNothings\/Web\/1";
+        console.log('reqSpan has been loaded: ' + link);
+        fetch(link)
+    		.then(data => {
+		  console.log("res: "+data.toString());
+		  window.fff=data;
+      	  spanElement.innerHTML = JSON.stringify(data).returnObj.cntent;
+    		})
+		.catch(error => {
+  		  
+ 		  console.log("error ---- "+error);
+		});;
+
+    };
+  </script></h1>
+<h1 id="杰伦过往专辑之个人略评">杰伦过往专辑之个人略评</h1>
 <h3 id="第一张jay杰伦">第一张：Jay（杰伦）</h3>
 <p>01.可爱女人.flac</p>
 <p>02.完美主义.flac</p>
